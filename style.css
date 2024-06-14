@@ -1,0 +1,129 @@
+/* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROPkxovTmxiUK4M28xNHS3YgyaBgDjOkOEtw&s") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header, footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+}
+
+.page h2 {
+    margin-bottom: 20px;
+}
+
+.auth-content, .container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.input-container input,
+.input-container select {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    height: 30px;
+    padding: 0 10px;
+    width: calc(100% - 22px);
+    color: white;
+    border-radius: 5px;
+}
+
+.input-container input[type="number"] {
+    width: 100%;
+}
+
+.button {
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.search {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid white;
+    height: 40px;
+    padding: 0 10px;
+    margin-top: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.table {
+    border: 1px solid white;
+    width: 80%;
+    border-spacing: 0;
+    min-height: 150px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.age{
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+td {
+    border-right: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    .page, .auth-content, .container {

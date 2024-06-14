@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="E:\COLLAGE\2ndyear\4thsem\webtech\pro\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Student Management</h1>
+    </header>
+    <div id="signup-page" class="page auth-page">
+        <div class="auth-content">
+            <h2>Sign Up</h2>
+            <div class="input-container">
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" placeholder="Enter your username">
+            </div>
+            <div class="input-container">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" placeholder="Enter your password">
+            </div>
+            <button class="button" type="button" onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+        </div>
+    </div>
+
+    <div id="login-page" class="page auth-page">
+        <div class="auth-content">
+            <h2>Login</h2>
+            <div class="input-container">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" placeholder="Enter your username">
+            </div>
+            <div class="input-container">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" placeholder="Enter your password">
+            </div>
+            <button class="button" type="button" onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignupPage()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <div id="main-page" class="page container">
+        <div class="input-container">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter student's name">
+        </div>
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter student's email">
+        </div>
+        <div class="input-container">
+            <label for="grade">GPA:</label>
+            <input type="text" id="grade" placeholder="Enter student's GPA">
+        </div>
+        <div class="input-container">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter student's age">
+        </div>
+        <div class="input-container">
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" placeholder="Enter student's degree">
+        </div>
+        <div class="input-container">
+            <label for="semester">Semester:</label>
+            <select id="semester">
+                <option value="">Select Semester</option>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+                <option value="Winter">Winter</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="course">Course:</label>
+            <select id="course">
+                <option value="">Select Course</option>
+                <option value="Math">Math</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="English">English</option>
+            </select>
+        </div>
+        <button class="button" type="submit" id="submit" onclick="addStudent()">Add Student</button>
+        <button class="button" type="button" onclick="showTablePage()">View Student Table</button>
+        <button class="button" type="button" onclick="logout()">Logout</button>
+    </div>
+
+    <div id="table-page" class="page">
+        <h2>Student Management Table</h2>
+        <input class="search" type="text" id="search" onkeyup="search()" placeholder="Search By Name, Email or Degree">
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>GPA</th>
+                    <th>Degree</th>
+                    <th>Semester</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        <button class="button" type="button" onclick="showMainPage()">Back to Student Management</button>
+    </div>
+
+    <script src="E:\COLLAGE\2ndyear\4thsem\webtech\pro\cons.js"></script>
+</body>
+</html>
